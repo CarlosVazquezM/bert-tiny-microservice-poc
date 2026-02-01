@@ -1,0 +1,18 @@
+# BERT-Tiny Semantic Search Microservices POC
+#
+# Note: If torch fails to install, install it separately first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#
+# Then: pip install -r requirements.txt
+
+# BERT POC services
+fastapi>=0.100.0
+uvicorn[standard]>=0.20.0
+pydantic>=2.0.0
+httpx>=0.24.0
+chromadb>=0.4.0
+
+# ML stack - use safetensors to load models (avoids torch 2.6 requirement)
+torch>=2.0
+transformers>=4.30.0
+safetensors>=0.4.0
